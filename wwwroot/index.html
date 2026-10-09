@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyaretçi Yönetim Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ziyaretçi Yönetim Sistemi</h1>
+            <p>Ziyaretçi kayıt ve giriş-çıkış işlemleri</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Yeni Ziyaretçi</h2>
+                <form id="ziyaretciForm">
+                    <input id="kimlik" type="text"
+                           placeholder="Kimlik Numarası" required>
+                    <input id="ad" type="text"
+                           placeholder="Ad Soyad" required>
+                    <input id="sirket" type="text"
+                           placeholder="Şirket" required>
+                    <button type="submit">Ziyaretçi Kaydet</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Giriş / Çıkış İşlemleri</h2>
+                <input id="ziyaretciId" type="number" min="1"
+                       placeholder="Ziyaretçi ID">
+                <input id="kapi" type="text"
+                       placeholder="Kapı (Örn: A)">
+                <div class="actions">
+                    <button id="girisBtn" type="button">
+                        Giriş Yap
+                    </button>
+                    <button id="cikisBtn" type="button"
+                            class="secondary">
+                        Çıkış Yap
+                    </button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Şu Anda İçeridekiler</h2>
+                <button id="yenileBtn" type="button"
+                        class="secondary">
+                    Listeyi Yenile
+                </button>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ad Soyad</th>
+                                <th>Kapı</th>
+                                <th>İçeride Kalma Süresi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="iceridekilerTablo">
+                            <tr>
+                                <td colspan="4">
+                                    Liste henüz yüklenmedi.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Kapı İstatistikleri</h2>
+                <div class="date-fields">
+                    <label>
+                        Başlangıç Tarihi
+                        <input id="baslangic" type="date">
+                    </label>
+                    <label>
+                        Bitiş Tarihi
+                        <input id="bitis" type="date">
+                    </label>
+                </div>
+                <button id="istatistikBtn" type="button">
+                    İstatistikleri Göster
+                </button>
+                <div id="istatistikSonuc"></div>
+            </section>
+        </main>
+
+        <div id="mesaj" role="status" aria-live="polite"></div>
+    </div>
+</body>
+</html>

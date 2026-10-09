@@ -1,0 +1,192 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #253047;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header p {
+    margin: 0;
+    color: #748096;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(30, 50, 80, 0.04);
+}
+
+.card h2 {
+    margin: 0 0 20px;
+    font-size: 19px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce2ec;
+    border-radius: 9px;
+    background: white;
+    color: #253047;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+form input {
+    margin-bottom: 0;
+}
+
+input:focus {
+    border-color: #6478e8;
+    box-shadow: 0 0 0 3px rgba(100, 120, 232, 0.12);
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 13px 17px;
+    background: #5267d9;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #4055c5;
+}
+
+button.secondary {
+    background: #edf0f8;
+    color: #36445e;
+}
+
+button.secondary:hover {
+    background: #dfe5f1;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    flex: 1;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 12px 9px;
+    text-align: left;
+    border-bottom: 1px solid #edf0f5;
+}
+
+th {
+    color: #65718a;
+    font-weight: 600;
+}
+
+.date-fields {
+    display: flex;
+    gap: 12px;
+}
+
+.date-fields label {
+    flex: 1;
+    font-size: 13px;
+    color: #65718a;
+}
+
+.date-fields input {
+    margin-top: 8px;
+}
+
+#istatistikSonuc {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#mesaj {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#mesaj:not(:empty) {
+    padding: 15px;
+    background: #eaf4ee;
+    border: 1px solid #c8e6d3;
+    border-radius: 10px;
+}
+
+#mesaj.hata {
+    background: #fff0f0;
+    border-color: #f0c6c6;
+    color: #ad3535;
+}
+
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 22px 14px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
